@@ -60,7 +60,7 @@ namespace StudentsApp.Hendlers
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return AuthenticateResult.Fail("err username or pass");
             }

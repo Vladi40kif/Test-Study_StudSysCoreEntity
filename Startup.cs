@@ -43,6 +43,8 @@ namespace StudentsApp
             services.AddDbContext<StudentAppContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("StudentAppDB")));
 
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +54,10 @@ namespace StudentsApp
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200"));
 
             app.UseHttpsRedirection();
 
