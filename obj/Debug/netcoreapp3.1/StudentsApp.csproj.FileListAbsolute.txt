@@ -147,12 +147,3 @@ C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\N
 C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\obj\Debug\netcoreapp3.1\StudentsApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\angular.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\e2e\tsconfig.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\package-lock.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\package.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\proxy.config.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\tsconfig.app.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\tsconfig.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\tsconfig.spec.json
-C:\Users\NETFULLY\source\repos\StudentsApp\StudentsApp\bin\Debug\netcoreapp3.1\Angular\tslint.json
