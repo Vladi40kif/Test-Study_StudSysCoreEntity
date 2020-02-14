@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using StudentsApp.Controllers.Auth;
 using StudentsApp.Hendlers;
 using StudentsApp.Models;
 
@@ -36,9 +37,12 @@ namespace StudentsApp
             services.AddMvc(option => option.EnableEndpointRouting = false)
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
-
+            /*
             services.AddAuthentication("BasicAuthentication")
                 .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+            */
+
+            services.AddScoped<IAuthInterface, AuthRepo>();
 
             services.AddDbContext<StudentAppContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("StudentAppDB")));
@@ -63,9 +67,8 @@ namespace StudentsApp
 
             app.UseRouting();
 
-            app.UseAuthentication();
-
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

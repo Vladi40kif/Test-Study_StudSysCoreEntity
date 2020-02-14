@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContextComponent} from './context/context.component';
+import { HeaderComponent} from './header/header.component';
+import { FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContextComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -14,6 +20,11 @@ import { AppComponent } from './app.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+      AppComponent,
+      ContextComponent,
+      HeaderComponent,
+      FooterComponent
+    ]
 })
 export class AppModule { }

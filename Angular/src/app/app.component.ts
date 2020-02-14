@@ -18,18 +18,4 @@ export class AppComponent {
     		})
   	};
 
-
-  	do():string {
-  		var data: string;
-
-  		// var i: number = 0;
-  		// while(this.responce[i]!=null){
-  		// 	data+= "date" + this.responce[i].date + "<br />";
-  		// 	data+= "temperatureC" + this.responce[i].temperatureC + "<br />";
-  		// 	data+= "summary" + this.responce[i].summary + "<br />";
-  		// 	data+= "<hr />";
-  		// }
-  		return data;
-  	};
-
 }

@@ -14,8 +14,9 @@ namespace StudentsApp.Models
         public string Name { get; set; }
         public string Sname { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; }
         public int? GroupId { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
 
         public virtual Group Group { get; set; }
         public virtual ICollection<StudentMarks> StudentMarks { get; set; }

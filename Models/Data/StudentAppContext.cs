@@ -26,8 +26,7 @@ namespace StudentsApp.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                //optionsBuilder.UseSqlServer("Data Source=DESKTOP-CRMJN2D\\SQLEXPRESS;Initial Catalog=StudentApp;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Name=StudentAppDB");
             }
         }
 
@@ -65,9 +64,15 @@ namespace StudentsApp.Models
                     .IsRequired()
                     .HasColumnType("ntext");
 
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                entity.Property(e => e.PasswordHash)
+                    .HasColumnName("Password_Hash")
+                    .HasMaxLength(512)
+                    .IsFixedLength();
+
+                entity.Property(e => e.PasswordSalt)
+                    .HasColumnName("Password_Salt")
+                    .HasMaxLength(512)
+                    .IsFixedLength();
 
                 entity.Property(e => e.Sname).HasColumnType("ntext");
 
@@ -131,6 +136,8 @@ namespace StudentsApp.Models
                 entity.HasKey(e => e.TeacherId);
 
                 entity.Property(e => e.TeacherId).HasColumnName("Teacher_id");
+
+                entity.Property(e => e.Info).HasColumnType("text");
 
                 entity.Property(e => e.Password).HasMaxLength(50);
 
